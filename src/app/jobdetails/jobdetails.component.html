@@ -1,0 +1,37 @@
+<div class="container" *ngIf="jobsdata">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="job-card">
+                <div class="d-flex align-items-center mb-3">
+                    <img [src]="'http://localhost:3001' + jobsdata.image" alt="Company Logo" class="mr-3 company-logo">
+                    <div>
+                        <div class="job-title"> {{ jobsdata.title }}</div>
+                        <div class=" bi bi-building fw-bold text-dark fs-5 text"> {{ jobsdata.company }}</div>
+                        <div class="text-muted bi bi-briefcase"> {{ jobsdata.experience }}</div>
+                        <div class="text-muted bi bi-geo-alt"> {{ jobsdata.location }}</div>
+                        <div class="salary bi bi-currency-rupee"> {{ jobsdata.salary }}</div>
+                    </div>
+                </div>
+                <h5>Job Description</h5>
+                <p>{{jobsdata.description}}</p>                
+                <h5>Required Skills </h5>
+                <ul>
+                    <li>{{jobsdata.skills}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="job-overview">
+                <h5>Job Overview</h5>
+                <ul class="list-unstyled">
+                    <li><strong>Posted date:</strong> {{ jobsdata.postdate }}</li>
+                    <li><strong>Location:</strong> {{ jobsdata.location }}</li>
+                    <li><strong>Vacancy:</strong> {{ jobsdata.vacancy }}</li>
+                    <li><strong>Job nature:</strong> {{ jobsdata.jobtype }}</li>
+                    <li><strong>Salary:</strong> {{ jobsdata.salary }}</li>                   
+                </ul>
+                <button class="btn btn-outline-primary" [routerLink]="['/apply', jobsdata.id]">Apply Now</button>
+            </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,115 @@
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="10">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner carousel slide carousel-fade" >
+        <div class="carousel-item active">
+            <img src="assets/img/h1_hero.jpg" class="d-block w-80" width="1550" height="600">
+            <div class="carousel-caption">
+                <h1>Find the <br> most exciting <br>startup jobs</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/h2_hero.png" class="d-block w-80" width="1550" height="600">
+            
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/h3_hero.png" class="d-block w-80" width="1550" height="600">
+        </div>
+       
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container my-5">
+    <div class="text-center">
+      <p class="btg">Browse Top Categories</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <div class="col" *ngFor="let category of categories">
+        <div class="category-card">
+          <img [src]="category.image" [alt]="category.name">
+          <h5>{{ category.name }}</h5>
+          <p>({{ category.count }})</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container my-5">
+    <div class="text-center">
+        
+        <p class="fj">Featured Jobs</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xl-10" *ngFor="let job of jobs">
+            
+            <div class="single-job-items mb-30">
+                <div class="job-items">
+                    <div class="company-img">
+                        <a href="#"><img [src]="'http://localhost:3001' + job.image" alt=""></a>
+                    </div>
+                    <div class="job-tittle">
+                        <a [routerLink]="['/job_details', job.id]"><h4>{{ job.title }}</h4></a>
+                        <ul>
+                            <li><i class="text-muted bi bi-building fw-bold"></i> {{ job.company }}</li>
+                            <li><i class="text-muted bi bi-briefcase"></i> {{ job.experience }}</li>
+                            <li><i class="text-muted bi bi-geo-alt fw-bold"></i> {{ job.location }}</li>
+                            <li><i class="salary bi bi-currency-rupee fw-bold"></i> {{ job.salary }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="items-link f-right">
+                    <button class="applybutton" [routerLink]="['/jobdetails', job.id]">View Details</button>&nbsp;
+                    <button class="btnfulltime"  [routerLink]="['/apply', job.id]">Apply</button> &nbsp; &nbsp; &nbsp; 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <button class="findjobcss" [routerLink]="['/find-jobs']">Find Jobs</button>
+      </div>
+    </div>
+
+    <section class="how-it-works text-center text-white">
+        <div class="container">
+          <h2 class="text-uppercase mb-4">Apply Process</h2>
+          <h3 class="mb-5">How it works</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-box mb-4">
+                <img src="assets\icons\search-location.png" alt="Search a job" class="img-fluid">
+              </div>
+              <h4>1. Search a job</h4>
+              
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box mb-4">
+                <img src="assets\icons\work.png" alt="Apply for job" class="img-fluid">
+              </div>
+              <h4>2. Apply for job</h4>
+             
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box mb-4">
+                <img src="assets\icons\job.png" alt="Get your job" class="img-fluid">
+              </div>
+              <h4>3. Get your job</h4>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+   

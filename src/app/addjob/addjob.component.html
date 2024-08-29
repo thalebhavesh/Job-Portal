@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header">
+        <p class="postjob">Post a Job</p>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #jobForm="ngForm">
+          <div class="form-group">
+            <label for="title">Job Title</label>
+            <input type="text" class="form-control" id="title" required [(ngModel)]="job.title" name="title">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" class="form-control" id="company" required [(ngModel)]="job.company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <select class="form-control" id="location" required [(ngModel)]="job.location" name="location">
+              <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="salary">Salary</label>
+            <select class="form-control" id="salary" required [(ngModel)]="job.salary" name="salary">
+              <option *ngFor="let salary of salaries" [value]="salary">{{ salary }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" id="category" required [(ngModel)]="job.category" name="category">
+              <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="image">Image</label>
+            <input type="file" (change)="onFileSelected($event)" class="form-control mt-2">
+          </div>
+          <div class="form-group">
+            <label for="experience">Experience</label>
+            <select class="form-control" id="experience" required [(ngModel)]="job.experience" name="experience">
+              <option *ngFor="let experience of experiences" [value]="experience">{{ experience }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" required [(ngModel)]="job.description" name="description"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" class="form-control" id="skills" required [(ngModel)]="job.skills" name="skills">
+          </div>
+          <div class="form-group">
+            <label for="postdate">Post Date</label>
+            <input type="date" class="form-control" id="postdate" required [(ngModel)]="job.postdate" name="postdate">
+          </div>
+          <div class="form-group">
+            <label for="vacancy">Vacancy</label>
+            <input type="number" class="form-control" id="vacancy" required [(ngModel)]="job.vacancy" name="vacancy">
+          </div>
+          <div class="form-group">
+            <label for="type">Job Type</label>
+            <select class="form-control" id="type" required [(ngModel)]="job.jobtype" name="type">
+              <option *ngFor="let jobtype of jobTypes" [value]="jobtype">{{ jobtype }}</option>
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Post Job</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

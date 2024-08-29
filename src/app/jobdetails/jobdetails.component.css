@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+}
+.job-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+.job-overview {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+}
+.job-overview h5 {
+    margin-bottom: 20px;
+}
+
+
+.company-logo {
+    max-height: 150px;
+    margin-right: 10px;
+}
+.job-title {
+    font-size: 1.80rem;
+    font-weight: bold;
+}

@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-gray  bg-gradient">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="assets/img/jobhub.png" width="162" height="40" class="d-inline-block align-top" alt="Job Portal" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/find-jobs" >Find Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/contactus">Contact Us</a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav>
+<router-outlet></router-outlet>
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h5>ABOUT US</h5>
+              <p class="footer-text">Connecting talents with opportunities.</p>
+              <p class="footer-text">Explore, apply, and succeed with our job portal.</p>
+          </div>
+          <div class="col-md-4">
+              <h5>CONTACT INFO</h5>
+              <p><strong>Address:</strong> 509, 5th Floor, Pride Icon, Pune, Pincode: 411984</p>
+              <p><strong>Phone:</strong> +91 9875854787/8875987546</p>
+              <p><strong>Email:</strong> <a href="#">info@jobhub.com</a></p>
+          </div>
+          <div class="col-md-4">
+              <h5>IMPORTANT LINK</h5>
+              <ul class="list-unstyled">
+                  <li><a href="/addjob">Recruiter</a></li>
+                  <li><a href="/view-details">View Applications</a></li>
+                  <li><a href="/home">JobHub</a></li>
+                  <li><a href="/find-jobs">Find Jobs</a></li>
+                  <li><a href="/aboutus">About Us</a></li>
+                  <li><a href="/contactus">Contact US</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>

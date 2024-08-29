@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.contact-section {
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+.contact-form h2 {
+    color: #333;
+}
+.contact-form .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #dcdcdc;
+}
+.btn-send {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    padding: 10px 20px;
+}
+.btn-send:hover {
+    background-color: #218838;
+}
+.contact-info {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.contact-info p {
+    color: #555;
+}
+.contact-info i {
+    color: #007bff;
+    margin-right: 15px;
+}
+.contactmaintitle{
+font-family: Impact, Charcoal, sans-serif;
+font-size: 45px;
+letter-spacing: 0.6px;
+word-spacing: -1.6px;
+color: #13d440;
+font-weight: 400;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+text-align: center;
+}
