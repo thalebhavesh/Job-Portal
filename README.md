@@ -19,7 +19,7 @@ Before you begin, ensure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/) (v14.x or later)
 - [Angular CLI](https://angular.io/cli) (v12.x or later)
 - [Git](https://git-scm.com/)
-- [MySQL](https://www.mongodb.com/) (if using MySQL as your database)
+- [MySQL](https://www.mysql.com//) (if using MySQL as your database)
 
 ## Install Server Dependencies
 
